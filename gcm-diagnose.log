@@ -1,0 +1,190 @@
+﻿Diagnose log at 2024-01-15T08:00:43Z
+
+AppPath: /usr/bin/git-credential-manager
+InstallDir: /usr/lib/share/git-credential-manager/
+Version: 2.4.1+c5df0f5729f3848d580202f20aea4fe66394e650
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: EndeavourOS
+Reading environment variables... OK
+ Variables:
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+WINDOWID=54525962
+GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/adam/.gtkrc-2.0:/home/adam/.config/gtkrc-2.0
+SYSTEMD_EXEC_PID=1063
+COLORTERM=truecolor
+KONSOLE_VERSION=230804
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+XDG_SESSION_CLASS=user
+SHELL_SESSION_ID=79ec35b579254684ac742f261f090ff4
+GTK_MODULES=canberra-gtk-module
+FUNCNEST=100
+TERM=xterm-256color
+KDE_SESSION_VERSION=5
+SHLVL=1
+DEBUGINFOD_URLS=https://debuginfod.archlinux.org
+DESKTOP_SESSION=plasma
+PWD=/home/adam/Documents/GodotWildOverload
+KONSOLE_DBUS_SERVICE=:1.49
+LC_MONETARY=en_US.UTF-8
+GIT_TRACE2_PARENT_SID=ec2256fd-e415-40dd-ab33-812b00bd39d4
+PAM_KWALLET5_LOGIN=/run/user/1000/kwallet5.socket
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+KDE_FULL_SESSION=true
+XDG_CURRENT_DESKTOP=KDE
+SESSION_MANAGER=local/ArchDesktop:@/tmp/.ICE-unix/1063,unix/ArchDesktop:/tmp/.ICE-unix/1063
+XCURSOR_SIZE=24
+MANAGERPID=984
+MAIL=/var/spool/mail/adam
+DISPLAY=:0
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+KDE_APPLICATIONS_AS_SCOPE=1
+XCURSOR_THEME=breeze_cursors
+_=/usr/bin/git-credential-manager
+XDG_SESSION_TYPE=x11
+KDE_SESSION_UID=1000
+LC_PAPER=en_US.UTF-8
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/plasma-ksmserver.service/memory.pressure
+HOME=/home/adam
+XDG_VTNR=2
+MOTD_SHOWN=pam
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/adam/.gtkrc:/home/adam/.config/gtkrc
+OLDPWD=/home/adam/Documents
+XDG_SESSION_ID=2
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+LC_NAME=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+LC_TIME=en_US.UTF-8
+XDG_SESSION_DESKTOP=KDE
+LOGNAME=adam
+SHELL=/bin/bash
+XAUTHORITY=/tmp/xauth_DDyBpF
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1
+EDITOR=nano
+LC_ADDRESS=en_US.UTF-8
+LC_TELEPHONE=en_US.UTF-8
+USER=adam
+JOURNAL_STREAM=8:12951
+LC_MEASUREMENT=en_US.UTF-8
+COLORFGBG=15;0
+LC_IDENTIFICATION=en_US.UTF-8
+BROWSER=firefox
+INVOCATION_ID=f83d9aa75f634dd9bfd4f3c607800885
+XDG_CONFIG_DIRS=/home/adam/.config/kdedefaults:/etc/xdg
+XDG_SEAT=seat0
+KONSOLE_DBUS_SESSION=/Sessions/2
+LANGUAGE=
+LANG=en_US.UTF-8
+XDG_RUNTIME_DIR=/run/user/1000
+PROFILEHOME=
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/c43a43d4b0590a184d9d0795'... OK
+Reading from temporary file '/tmp/c43a43d4b0590a184d9d0795'... OK
+Deleting temporary file '/tmp/c43a43d4b0590a184d9d0795'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/adam
+UserDataDirectoryPath: /home/adam/.gcm
+GetCurrentDirectory(): /home/adam/Documents/GodotWildOverload
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:42225/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.43.0'
+Locating current repository... OK
+Git repository at '/home/adam/Documents/GodotWildOverload/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/adam/.gitconfig	user.email=adamofford23@gmail.com
+file:/home/adam/.gitconfig	user.name=ZealousPython
+file:/home/adam/.gitconfig	credential.helper=
+file:/home/adam/.gitconfig	credential.helper=/usr/bin/git-credential-manager
+file:/home/adam/.gitconfig	credential.credentialstore=cache
+file:/home/adam/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/ZealousPython/GodotWildOverload.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/adam/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/adam/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
