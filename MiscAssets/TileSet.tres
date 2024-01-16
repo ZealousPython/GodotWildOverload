@@ -1,84 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://ceo47vckxqlqw"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dq4phrfeuyaiy"]
 
-
-[ext_resource type="Script" path="res://Character Objects/Player Body.gd" id="1_3j56g"]
-[ext_resource type="Texture2D" uid="uid://ddi05e53jys0g" path="res://Character Objects/Assets/Character Idle.png" id="1_vnb0h"]
-[ext_resource type="Texture2D" uid="uid://dur7cbkj8fhkv" path="res://Character Objects/Assets/Character Walk.png" id="2_dy01n"]
-[ext_resource type="Script" path="res://Character Objects/WeaponHand.gd" id="2_n6m8p"]
-[ext_resource type="Texture2D" uid="uid://cwqjwdimp4l6v" path="res://MiscAssets/2d_lights_and_shadows_neutral_point_light.webp" id="4_81ifx"]
-[ext_resource type="PackedScene" uid="uid://bx5fmxvwqkb31" path="res://Character Objects/Weapons/BaseWeapon.tscn" id="5_inlh7"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdt8i"]
-atlas = ExtResource("1_vnb0h")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hhxnj"]
-atlas = ExtResource("1_vnb0h")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3wqb8"]
-atlas = ExtResource("2_dy01n")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dcse0"]
-atlas = ExtResource("2_dy01n")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x1dmk"]
-atlas = ExtResource("2_dy01n")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rvtn6"]
-atlas = ExtResource("2_dy01n")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_i8517"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mdt8i")
-}],
-"loop": true,
-"name": &"IdleAngled",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hhxnj")
-}],
-"loop": true,
-"name": &"IdleForward",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3wqb8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dcse0")
-}],
-"loop": true,
-"name": &"WalkAngled",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x1dmk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rvtn6")
-}],
-"loop": true,
-"name": &"WalkForward",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtdvi"]
-radius = 3.0
-height = 12.0
+[ext_resource type="Texture2D" uid="uid://cahww58p7dtq7" path="res://Aseprite/Tiles/MapTileset.png" id="1_68ow4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wr5yd"]
-texture = ExtResource("5_6egfr")
+texture = ExtResource("1_68ow4")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -199,78 +124,6 @@ texture = ExtResource("5_6egfr")
 6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:3/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSet" id="TileSet_1cvex"]
+[resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wr5yd")
-
-[node name="Player" type="Node2D"]
-
-[node name="Player Body" type="CharacterBody2D" parent="."]
-motion_mode = 1
-slide_on_ceiling = false
-floor_stop_on_slope = false
-script = ExtResource("1_3j56g")
-
-[node name="Body" type="AnimatedSprite2D" parent="Player Body"]
-modulate = Color(0, 1, 1, 1)
-position = Vector2(1, 0)
-sprite_frames = SubResource("SpriteFrames_i8517")
-animation = &"WalkForward"
-frame_progress = 0.826918
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player Body"]
-position = Vector2(0.5, -0.5)
-shape = SubResource("CapsuleShape2D_dtdvi")
-
-[node name="Visor" type="Node2D" parent="Player Body"]
-position = Vector2(0.5, 0.5)
-
-[node name="VisorPoint2" type="PointLight2D" parent="Player Body/Visor"]
-position = Vector2(-0.5, -5.5)
-color = Color(0, 1, 1, 1)
-texture = ExtResource("4_81ifx")
-texture_scale = 0.03
-height = 1.0
-
-[node name="VisorPoint3" type="PointLight2D" parent="Player Body/Visor"]
-position = Vector2(-1, -4)
-color = Color(0, 1, 1, 1)
-texture = ExtResource("4_81ifx")
-texture_scale = 0.03
-height = 1.0
-
-[node name="VisorPoint4" type="PointLight2D" parent="Player Body/Visor"]
-position = Vector2(0, -4)
-color = Color(0, 1, 1, 1)
-texture = ExtResource("4_81ifx")
-texture_scale = 0.03
-height = 1.0
-
-[node name="VisorPoint5" type="PointLight2D" parent="Player Body/Visor"]
-position = Vector2(1.5, -4.5)
-color = Color(0, 1, 1, 1)
-texture = ExtResource("4_81ifx")
-texture_scale = 0.03
-height = 1.0
-
-[node name="VisorPoint6" type="PointLight2D" parent="Player Body/Visor"]
-position = Vector2(1, -5)
-color = Color(0, 1, 1, 1)
-texture = ExtResource("4_81ifx")
-texture_scale = 0.03
-height = 1.0
-
-[node name="WeaponHand" type="Node2D" parent="."]
-position = Vector2(0.5, 0)
-script = ExtResource("2_n6m8p")
-
-[node name="Weapon" parent="WeaponHand" instance=ExtResource("5_inlh7")]
-position = Vector2(12, -0.5)
-rotation = 3.14159
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.427451, 0.427451, 0.427451, 1)
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_1cvex")
-format = 2
