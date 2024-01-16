@@ -32,8 +32,6 @@ func _physics_process(delta):
 func HandleAnimations():
 	$Body.flip_h = true if movementDirection.x > 0 else false
 	
-	if movementDirection.x != 0:
-		$Visor.scale.x = movementDirection.x
 	var walking = "Walk" if movementDirection != Vector2.ZERO else "Idle"
 	
 	if movementDirection.x > 0 or movementDirection.x < 0:
