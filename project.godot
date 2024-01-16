@@ -13,3 +13,18 @@ config_version=5
 config/name="GodotWildOverload"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=240
+window/size/viewport_height=180
+window/size/mode=3
+window/size/resizable=false
+window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+window/stretch/scale_mode="integer"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
