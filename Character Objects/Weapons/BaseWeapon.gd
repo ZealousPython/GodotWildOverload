@@ -13,10 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	WeaponLogic(delta)
 	if Input.is_action_pressed("Attack") and !onCooldown:
 		attacking = true
-		attack()
+		Attack()
 		
 	else:
 		attacking = false
@@ -32,6 +32,9 @@ func _process(delta):
 	if onCooldown and overloadAmount <= 0:
 		onCooldown = false
 	overloadAmount = clamp(overloadAmount,0,100)
+
+func WeaponLogic(delta):
+	pass
 
 func _physics_process(delta):
 	WeaponEffects()
@@ -53,5 +56,5 @@ func OverloadAttack():
 
 func ChargeLight():
 	$PointLight2D.energy = overloadAmount*16/320
-func attack():
+func Attack():
 	pass

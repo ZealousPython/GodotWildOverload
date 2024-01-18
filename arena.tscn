@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch2rk2m6a3r3t"]
+[gd_scene load_steps=3 format=3 uid="uid://cjtritl4gocby"]
 
-[ext_resource type="TileSet" uid="uid://dq4phrfeuyaiy" path="res://MiscAssets/TileSet.tres" id="1_41nwv"]
+[ext_resource type="TileSet" uid="uid://dd5ojcslwpuo6" path="res://MiscAssets/TileSet.tres" id="1_41nwv"]
 [ext_resource type="PackedScene" uid="uid://ceo47vckxqlqw" path="res://Character Objects/Player.tscn" id="2_h16x0"]
 
 [node name="Arena" type="Node2D"]
@@ -13,7 +13,7 @@ layer_0/tile_data = PackedInt32Array(1, 393216, 0, 2, 393216, 0, 3, 393216, 0, 4
 [node name="Player" parent="." instance=ExtResource("2_h16x0")]
 position = Vector2(120, 96)
 
-[node name="CanvasModulate" parent="Player" index="1"]
+[node name="CanvasModulate" parent="Player" index="2"]
 visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

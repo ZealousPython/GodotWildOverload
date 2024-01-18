@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dedpapw6pg21g"]
+
+[ext_resource type="Script" path="res://Character Objects/Weapons/MachineGun/thrown_weapon.gd" id="1_5cydy"]
+[ext_resource type="Texture2D" uid="uid://bfv31p307dnuo" path="res://Character Objects/Weapons/Assets/MachineGun.png" id="1_xu8m3"]
+[ext_resource type="Texture2D" uid="uid://cwqjwdimp4l6v" path="res://MiscAssets/2d_lights_and_shadows_neutral_point_light.webp" id="2_82sn8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6i7sn"]
+radius = 7.0
+
+[node name="ThrownWeapon" type="CharacterBody2D"]
+script = ExtResource("1_5cydy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xu8m3")
+offset = Vector2(0.5, 0.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 16.0
+texture = ExtResource("2_82sn8")
+texture_scale = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6i7sn")
