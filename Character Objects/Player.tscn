@@ -1,12 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://ceo47vckxqlqw"]
-
+[gd_scene load_steps=16 format=3 uid="uid://ceo47vckxqlqw"]
 
 [ext_resource type="Script" path="res://Character Objects/Player Body.gd" id="1_3j56g"]
+[ext_resource type="Script" path="res://Character Objects/Player.gd" id="1_iaawj"]
 [ext_resource type="Texture2D" uid="uid://ddi05e53jys0g" path="res://Character Objects/Assets/Character Idle.png" id="1_vnb0h"]
 [ext_resource type="Texture2D" uid="uid://dur7cbkj8fhkv" path="res://Character Objects/Assets/Character Walk.png" id="2_dy01n"]
 [ext_resource type="Script" path="res://Character Objects/WeaponHand.gd" id="2_n6m8p"]
 [ext_resource type="Texture2D" uid="uid://cwqjwdimp4l6v" path="res://MiscAssets/2d_lights_and_shadows_neutral_point_light.webp" id="4_81ifx"]
-[ext_resource type="PackedScene" uid="uid://bx5fmxvwqkb31" path="res://Character Objects/Weapons/BaseWeapon.tscn" id="5_inlh7"]
+[ext_resource type="PackedScene" uid="uid://cga2y2at1gca" path="res://Character Objects/Weapons/MachineGun/MachineGun.tscn" id="7_vligc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdt8i"]
 atlas = ExtResource("1_vnb0h")
@@ -78,6 +78,7 @@ radius = 3.0
 height = 12.0
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_iaawj")
 
 [node name="Player Body" type="CharacterBody2D" parent="."]
 motion_mode = 1
@@ -138,10 +139,9 @@ height = 1.0
 position = Vector2(0.5, 0)
 script = ExtResource("2_n6m8p")
 
-[node name="Weapon" parent="WeaponHand" instance=ExtResource("5_inlh7")]
-position = Vector2(12, -0.5)
+[node name="MachineGun" parent="WeaponHand" instance=ExtResource("7_vligc")]
+position = Vector2(10.5, 0)
 rotation = 3.14159
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.427451, 0.427451, 0.427451, 1)
-

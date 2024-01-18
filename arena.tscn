@@ -1,6 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ch2rk2m6a3r3t"]
 
-[ext_resource type="TileSet" uid="uid://dq4phrfeuyaiy" path="res://MiscAssets/TileSet.tres" id="1_41nwv"]
+
+[ext_resource type="TileSet" uid="uid://dd5ojcslwpuo6" path="res://MiscAssets/TileSet.tres" id="1_41nwv"]
 [ext_resource type="PackedScene" uid="uid://ceo47vckxqlqw" path="res://Character Objects/Player.tscn" id="2_h16x0"]
 [ext_resource type="Script" path="res://MiscAssets/MapLayout.gd" id="2_sno6a"]
 
@@ -82,9 +83,6 @@ position = Vector2(135, 88)
 
 [node name="Camera2D" type="Camera2D" parent="Player/Player Body" index="3"]
 position = Vector2(1, 0)
-
-[node name="CanvasModulate" parent="Player" index="2"]
-visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.415686, 0.415686, 0.415686, 1)

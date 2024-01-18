@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://chp37gsb6iyyy"]
+
+[ext_resource type="Script" path="res://Character Objects/Weapons/MachineGun/machine_gun_bullet.gd" id="1_5aien"]
+[ext_resource type="Texture2D" uid="uid://bnavwm12f6vf" path="res://Character Objects/Weapons/Assets/Projectile.png" id="1_5r66r"]
+[ext_resource type="Texture2D" uid="uid://cwqjwdimp4l6v" path="res://MiscAssets/2d_lights_and_shadows_neutral_point_light.webp" id="2_1qtyk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4a8e8"]
+radius = 2.0
+height = 8.0
+
+[node name="MachineGunBullet" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_5aien")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4a8e8")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("2_1qtyk")
+texture_scale = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4a8e8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5r66r")
+offset = Vector2(4, 0.5)
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
